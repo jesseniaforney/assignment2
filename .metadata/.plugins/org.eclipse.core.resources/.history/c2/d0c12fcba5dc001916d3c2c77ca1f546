@@ -1,0 +1,37 @@
+package forney_01;
+
+import java.util.Scanner;
+
+public class encrypt {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		
+		int number;
+		int encrypt;
+		int first;
+		int second;
+		int third;
+		int fourth;
+		
+		System.out.println("Enter four digits: ");
+		number = in.nextInt();
+		
+		fourth = ((number % 10) + 7) % 10;
+		number /= 10;
+		third = ((number % 10) + 7) % 10;
+		number /= 10;
+		second = ((number % 10) + 7) % 10;
+		number /= 10;
+		first = ((number % 10) + 7) % 10;
+		
+		encrypt = encrypt * third * 1000;
+		encrypt = encrypt + (fourth * 100);
+		encrypt = encrypt + (first * 10);
+		encrypt = (encrypt + second);
+		
+		System.out.println("The encrypted integer is: " + encrypt);
+	}
+
+}

@@ -1,0 +1,19 @@
+package forney_01;
+
+import java.util.Scanner;
+
+public class encrypt {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("Enter four digits: ");
+		String encrypt = in.next();
+		
+		encrypt = encrypt + 7;
+		
+		System.out.println(encrypt);
+	}
+
+}
